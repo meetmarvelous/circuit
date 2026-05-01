@@ -1,0 +1,97 @@
+Landing PAgehttps://circuitt.netlify.app/
+
+______________________________________________
+
+Message from Founder:
+
+Love the energy, let’s move 🚀
+
+Your focus sounds exactly right — especially keeping the MVP simple and making the flow super clear.
+
+On structure:
+
+Right now I see this as a hackathon collaboration to build a strong MVP + demo fast.
+So the main goal is to ship something solid within the timeframe.
+
+On rewards:
+
+- if we win any hackathon prize → we split it fairly based on contribution
+- if we continue after the hackathon → we can discuss longer-term structure (roles / equity / etc.)
+
+For now I’d keep it simple and execution-focused.
+
+---
+
+For next steps, let’s align:
+
+MVP flow (v1):
+POS (mock data) → hash → “proof” → simple dashboard
+
+Next 24–48h:
+
+- define clean data flow
+- build simple mock pipeline
+- basic dashboard (even static first)
+
+Rough split:
+
+- me → overall concept + flow + coordination
+- you → product flow + dashboard + making demo clear
+
+______________________________________________
+
+Let’s lock a very simple MVP for the next 24–48h.
+
+Core idea:
+We simulate the full flow:
+POS → revenue → hash → proof → dashboard
+
+---
+
+Your focus (product + demo side):
+
+1. Define user flow (very simple)
+   
+   - who is the user? (SME owner / investor)
+   - what do they see step-by-step?
+
+2. Design dashboard structure
+   (no code needed yet, just structure)
+   
+   - revenue display
+   - proof (hash)
+   - “verified” status
+   - simple timeline/history
+
+3. Simplify the narrative
+   
+   - how we explain this in 1–2 sentences
+   - what makes it different from Web2
+
+4. (optional) Basic UI mock
+   
+   - even Figma / sketch / simple layout is enough
+
+---
+
+My side:
+
+I’ll start building the mock MVP:
+
+- create sample POS data (JSON)
+- generate hashes
+- simulate “proof storage”
+- connect it into a simple flow
+
+---
+
+Goal for next 24h:
+
+- clear user flow
+- working mock pipeline (data → hash → proof)
+- basic dashboard structure
+
+Then we combine everything into a demo
+
+______________________________________________
+
