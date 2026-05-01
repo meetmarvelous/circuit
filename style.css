@@ -706,3 +706,32 @@ hr {
         margin-top: 1rem;
     }
 }
+
+/* Protocol Insight Component */
+.protocol-insight {
+    margin-bottom: 2rem;
+}
+
+.usp-item {
+    margin-top: 1.5rem;
+}
+
+.usp-item label {
+    font-size: 0.7rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.usp-item p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-dim);
+}
+
+.usp-item strong {
+    color: var(--text-main);
+}
