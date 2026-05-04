@@ -67,24 +67,44 @@ body {
     margin-bottom: 3rem;
 }
 
-.brand h1 {
-    font-size: 2rem;
+.brand-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-name {
     font-weight: 700;
+    font-size: 1.8rem;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #FFF 0%, #AAA 100%);
+    color: var(--text-main);
+    line-height: 1;
+    background: linear-gradient(180deg, #FFFFFF 0%, #BBBBBB 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.brand h1 {
+    display: none;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
 }
 
 .brand p {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: var(--secondary);
-    letter-spacing: 0.2em;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    margin-top: 0.2rem;
-    font-weight: 600;
+    margin-top: 0.6rem;
+    font-weight: 800;
+    opacity: 0.9;
 }
-
 nav {
     flex-grow: 1;
 }
@@ -234,8 +254,18 @@ header p {
     margin-bottom: 0;
 }
 
-.mobile-header .brand h1 {
-    font-size: 1.5rem;
+.mobile-header .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-header .logo-img {
+    height: 32px;
+}
+
+.mobile-header .brand-name {
+    font-size: 1.8rem;
 }
 
 .hamburger {

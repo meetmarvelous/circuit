@@ -4,6 +4,7 @@ const state = {
     sold: 36,
     verified: 36,
     royalties: 163800,
+    chartValues: [40, 60, 55, 80, 95], // Initial bar heights in %
     feedItems: [
         { id: 36, name: "Wrap Dress #36", time: "12 mins ago", hash: "9M2...P1v8", status: "Verified" },
         { id: 35, name: "Wrap Dress #35", time: "45 mins ago", hash: "7B4...Q9m2", status: "Verified" },
@@ -14,6 +15,7 @@ const state = {
 function init() {
     renderFeed();
     setupEventListeners();
+    updateChartUI(); // Initial chart render
     
     // Start the "WOW" factor simulation after 5 seconds
     setTimeout(startLiveDemo, 5000);
@@ -60,12 +62,21 @@ function createNewSale() {
                 const resalePrice = 85000;
                 const royaltyEarned = resalePrice * 0.07;
                 state.royalties += royaltyEarned;
-                // Revenue doesn't increase for the brand on resale, only royalties do
+                
+                // Update chart to show market value bump
+                state.chartValues.shift();
+                state.chartValues.push(Math.min(98, state.chartValues[3] + (Math.random() * 10)));
+                updateChartUI();
             } else {
                 state.revenue += 65000;
                 state.sold += 1;
                 state.verified += 1;
                 state.royalties += (65000 * 0.07);
+                
+                // Subtle chart fluctuation for primary sales
+                state.chartValues.shift();
+                state.chartValues.push(Math.min(95, 80 + (Math.random() * 15)));
+                updateChartUI();
             }
             
             updateStatsUI();
@@ -96,6 +107,15 @@ function updateStatsUI() {
         progressLabel.innerText = "Sold Out";
         progressLabel.style.color = "var(--secondary)";
     }
+}
+
+function updateChartUI() {
+    const bars = document.querySelectorAll('.chart-bar');
+    if (!bars.length) return;
+    
+    bars.forEach((bar, index) => {
+        bar.style.height = `${state.chartValues[index]}%`;
+    });
 }
 
 // Render the verification feed
