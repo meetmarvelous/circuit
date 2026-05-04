@@ -12,7 +12,7 @@
 ### 2. The Dashboard (Live Demo)
 "Look at our dashboard. This is **Drop Zero**, happening right now in Lagos. 
 
-As you can see, we are currently at **36 out of 40 units**. Every single one of these has already been paid for and secured in a trustless escrow. 
+As you can see, we are currently at **36 out of 40 units**. Every single one of these has already been paid for via a trustless **Helio USDC checkout**, which automatically minted their Digital Product Passport the second the funds cleared. This is 100% automated Web3 commerce without writing custom backend code. 
 
 In the feed below, you are watching the **Verification Maze** in real-time. When our production team completes a garment, they link a physical NFC chip to its Digital Product Passport on Solana. 
 

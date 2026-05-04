@@ -11,7 +11,7 @@ Start by mentioning that **fashion is the 2nd most polluting industry**, largely
 When demoing the dashboard, follow this flow:
 
 ### Phase A: The "Primary Drop" (0-40 Units)
-- **Point out the "Drop Zero Progress"**: Explain that every unit shown is already paid for and held in escrow.
+- **Point out the "Drop Zero Progress"**: Explain that every unit shown is already paid for instantly via **Helio**. Highlight that the checkout automatically mints the NFT to the buyer's wallet, demonstrating real Web3 automation without custom backend code.
 - **Show the "Verification Maze"**: Explain that as the physical team in Lagos completes a garment, they "link" it. The judges will see the **"Minting"** status flip to **"Verified"** in real-time.
 - **The "Inspect" Moment**: Click "Inspect" on a verified item. Show the **Digital Product Passport**. This is the garment's birth certificate on Solana.
 
