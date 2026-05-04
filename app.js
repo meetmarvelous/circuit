@@ -114,7 +114,9 @@ function updateChartUI() {
     if (!bars.length) return;
     
     bars.forEach((bar, index) => {
-        bar.style.height = `${state.chartValues[index]}%`;
+        const val = Math.floor(state.chartValues[index]);
+        bar.style.height = `${val}%`;
+        bar.setAttribute('data-value', val);
     });
 }
 
@@ -131,7 +133,7 @@ function renderFeed() {
             </div>
             <div class="item-content">
                 <p>${item.name} linked to NTAG213</p>
-                <code class="hash">${item.status === 'Verified' ? 'Hash: ' + item.hash : 'Processing on Solana...'}</code>
+                <code class="hash ${item.status === 'Verified' ? '' : 'processing'}">${item.status === 'Verified' ? 'Hash: ' + item.hash : 'Processing on Solana...'}</code>
             </div>
             <button class="btn-view" onclick="openDPP(${item.id})">Inspect</button>
         </div>
@@ -157,11 +159,19 @@ window.openDPP = function(id) {
     const serial = document.querySelector(".serial");
     if (serial) serial.innerText = `#CIR-001-${String(id).padStart(2, "0")}`;
     modal.style.display = "block";
+    // Slight delay to allow display: block to apply before adding class for transition
+    setTimeout(() => {
+        modal.classList.add("active");
+    }, 10);
     document.body.style.overflow = "hidden"; // Prevent scroll
 }
 
 window.closeModal = function() {
-    modal.style.display = "none";
+    modal.classList.remove("active");
+    // Wait for transition to finish before hiding
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 300);
     document.body.style.overflow = "auto"; // Restore scroll
 }
 
